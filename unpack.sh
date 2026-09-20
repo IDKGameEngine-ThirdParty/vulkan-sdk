@@ -11,24 +11,25 @@ wget -N "https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/${SDK_ARCHIVE}
 tar -xf $SDK_ARCHIVE -C $THIS_DIR/sdk/ --strip-components=1 --skip-old-files
 
 mkdir -p $THIS_DIR/sdk && cd $THIS_DIR/sdk
-./vulkansdk \
-    --maxjobs \
-    glslang \
-    vulkan-headers \
-    vulkan-loader \
-    vulkan-validationlayers \
-    vulkantools \
-    shaderc \
-    spirv-headers \
-    spirv-tools \
-    spirv-cross \
-    gfxreconstruct \
-    spirv-reflect \
-    vulkan-extensionlayer \
-    vulkan-profiles \
-    DirectXShaderCompiler \
-    volk \
-    VulkanMemoryAllocator \
-    VulkanCapsViewer \
-    Vulkan-Utilities-Library \
-    slang
+./vulkansdk --maxjobs vulkan-headers vulkan-loader volk
+# ./vulkansdk \
+#     --maxjobs \
+#     glslang \
+#     vulkan-headers \
+#     vulkan-loader \
+#     vulkan-validationlayers \
+#     vulkantools \
+#     shaderc \
+#     spirv-headers \
+#     spirv-tools \
+#     spirv-cross \
+#     gfxreconstruct \
+#     spirv-reflect \
+#     vulkan-extensionlayer \
+#     vulkan-profiles \
+#     DirectXShaderCompiler \
+#     volk \
+#     VulkanMemoryAllocator \
+#     VulkanCapsViewer \
+#     Vulkan-Utilities-Library \
+#     slang
